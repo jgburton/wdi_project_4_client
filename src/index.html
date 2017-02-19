@@ -1,39 +1,108 @@
+
 <!DOCTYPE html>
-<html ng-app="test">
-  <head>
-    <meta charset="utf-8">
-    <title>Test</title>
-  </head>
-  <body ng-controller="main as main">
-    {{ 2 + 3 }}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script>
-      angular.module("test", [])
-      .controller('main', ['$http', function($http){
-        $http({
-          method: 'get',
-          url: 'http://localhost:3000/api/users'
-        }).then(data => {
-          console.log(data);
-        }, err => {
-          console.error(err);
-        });
-      }]);
-    </script>
-  </body>
+<html ng-app="angularAuthentication"><head>
+  <meta charset="utf-8">
+  <title>RemoteComposer</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script> -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+<body ng-controller="MainCtrl as main">
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" ui-sref="home">RemoteComposer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-show="main.user">
+              <!-- <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome, {{ main.user.name }}</p> -->
+            </li>
+            <!-- <li ng-show="main.user">
+            <a ui-sref="motifCreate"><span class="btn btn-primary">Post your motif</span></a>
+          </li> -->
+          <li ng-hide="main.user">
+            <a ui-sref="register"><span>Register</span></a>
+          </li>
+
+
+
+          <li ng-hide="main.user">
+            <a ng-click="main.toggleLogin()">Login</a>
+          </li>
+
+
+          <!-- <li ng-show="main.user">
+          <a ui-sref="usersIndex">Users</a>
+        </li> -->
+        <!-- <li ng-show="main.user">
+        <a ng-click="main.logout()">Logout</a>
+      </li> -->
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</header>
+<div id="logdrop" class="loginDropdown">
+  <form ng-submit="main.login()">
+    <div>
+      <input class="form-control" type="email" name="email" ng-model="main.userLogin.email" placeholder="Email">
+    </div>
+    <div>
+      <input class="form-control" type="password" name="password" ng-model="main.userLogin.password" placeholder="Password">
+    </div>
+    <input class="btn btn-primary pull-right" type="submit" value="Submit">
+  </form>
+</div>
+
+<main class="page-wrap" ui-view></main>
+
+</body>
+
+<footer>
+
+  <p class="footer-text">RemoteComposer is a registered trademark of Team RichJam.<br>
+    Made with &hearts; at GA
+  </p>
+
+</footer>
+
 </html>
 
+<!-- </html>
+{{ 1+1 }}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script>
+angular.module("angularAuthentication", [])
+.controller('main', ['$http', function($http) {
 
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Angular Stack Setup</title>
-    <!-inject:js -->
-    <!-- endinject -->
-    <!-- inject:css -->
-    <!-- endinject -->
-  <!-- </head>
-  <body>
-  </body>
-</html> -->
+$http({
+method: 'get',
+url: 'http://localhost:4000/api/users'
+}).then(data => {
+console.log(data);
+}, err => {
+console.log(err);
+});
+}]);
+
+</script>
+</body>
+</html>
