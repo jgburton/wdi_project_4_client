@@ -9,6 +9,16 @@
   <!-- endinject -->
   <!-- inject:css -->
   <!-- endinject -->
+  <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+  <script type="text/javascript">
+  filepicker.setKey("Au0FfUuSTvihNwvzZV0Q3z");
+  filepicker.store(input, {options}, onSuccess(Blob){}, onError(FPError){}, onProgress(percent){});
+</script>
+  <!-- <script type="text/javascript">
+    filepicker.setKey("Au0FfUuSTvihNwvzZV0Q3z");
+    filepicker.pickAndStore(picker_options, store_options, onSuccess(Blob){}, onError(FPError){}, onProgress(FPProgress){});
+  </script> -->
+
 </head>
 <body ng-controller="MainCtrl as main">
   <header>
@@ -52,6 +62,15 @@
     </nav>
   </header>
   <main ui-view></main>
+
+
+
+
+
+
+  <!-- <input ng-show="main.user" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z"
+  onchange="alert(event.fpfile.url)"> -->
+
   <footer>
     <p class="footer-text">RemoteComposer is a registered trademark of Team RichJam.<br>
       Made with &hearts; at GA

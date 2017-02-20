@@ -1,3 +1,50 @@
-<h1>Ideas</h1>
 
+<h1>Ideas</h1>
 <p>Uploaded mp3s here in categories of instrument</p>
+
+
+<input ng-show="main.user" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z"
+onchange="alert(event.fpfile.url)">
+<br>
+
+
+
+
+<!-- __________________________________ -->
+
+
+<audio controls>
+  <source ng-src="https://cdn.filestackcontent.com/5LzAfsdBRgCjCKlGI9xW" type="audio/ogg">
+        <!-- Guitar -->
+        Your browser does not support the audio tag.
+</audio>
+
+
+<br>
+<audio controls>
+  <source ng-src="https://cdn.filestackcontent.com/68EAlNHhSmeXpYDlkFTb" type="audio/ogg">
+    <!-- Piano -->
+  Your browser does not support the audio tag.
+</audio>
+
+<br>
+<audio controls>
+  <source ng-src="https://cdn.filestackcontent.com/kBFU6k1oSPy6jLD756dy" type="audio/ogg">
+    <!-- Mandolin -->
+  Your browser does not support the audio tag.
+</audio>
+
+<form>
+
+<input type="button" value="PlaySound" onClick="PlaySound('audio1'),PlaySound('audio2')">
+
+<input type="button" value="PauseSound" onClick="PauseSound('audio2'),PauseSound('audio1')">
+
+</form>
+
+
+<!-- <form action="/action_page.php">
+  <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
+  <input type="submit" value="Submit">
+</form> -->
