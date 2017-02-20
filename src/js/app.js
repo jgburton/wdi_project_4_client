@@ -2,7 +2,6 @@ angular
 .module('angularAuthentication', [
   'ui.router',
   'ngResource',
-  'angular-jwt',
-  'ui.bootstrap',
-  'textAngular'
+  'angular-jwt'
+  // 'ui.bootstrap'
 ]);

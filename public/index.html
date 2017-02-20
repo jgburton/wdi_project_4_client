@@ -1,18 +1,16 @@
 
 <!DOCTYPE html>
-<html ng-app="angularAuthentication"><head>
+<html ng-app="angularAuthentication">
+<head>
   <meta charset="utf-8">
+  <base href="/" />
   <title>RemoteComposer</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script> -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
+  <!-- inject:js -->
+  <script src="js/app.js"></script>
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
 </head>
 <body ng-controller="MainCtrl as main">
   <header>
@@ -35,74 +33,22 @@
             <li ng-show="main.user">
               <!-- <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome, {{ main.user.name }}</p> -->
             </li>
-            <!-- <li ng-show="main.user">
-            <a ui-sref="motifCreate"><span class="btn btn-primary">Post your motif</span></a>
-          </li> -->
-          <li ng-hide="main.user">
-            <a ui-sref="register"><span>Register</span></a>
-          </li>
-
-
-
-          <li ng-hide="main.user">
-            <a ng-click="main.toggleLogin()">Login</a>
-          </li>
-
-
-          <!-- <li ng-show="main.user">
-          <a ui-sref="usersIndex">Users</a>
-        </li> -->
-        <!-- <li ng-show="main.user">
-        <a ng-click="main.logout()">Logout</a>
-      </li> -->
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
-</header>
-<div id="logdrop" class="loginDropdown">
-  <form ng-submit="main.login()">
-    <div>
-      <input class="form-control" type="email" name="email" ng-model="main.userLogin.email" placeholder="Email">
-    </div>
-    <div>
-      <input class="form-control" type="password" name="password" ng-model="main.userLogin.password" placeholder="Password">
-    </div>
-    <input class="btn btn-primary pull-right" type="submit" value="Submit">
-  </form>
-</div>
-
-<main class="page-wrap" ui-view></main>
-
-</body>
-
-<footer>
-
-  <p class="footer-text">RemoteComposer is a registered trademark of Team RichJam.<br>
-    Made with &hearts; at GA
-  </p>
-
-</footer>
-
-</html>
-
-<!-- </html>
-{{ 1+1 }}
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script>
-angular.module("angularAuthentication", [])
-.controller('main', ['$http', function($http) {
-
-$http({
-method: 'get',
-url: 'http://localhost:4000/api/users'
-}).then(data => {
-console.log(data);
-}, err => {
-console.log(err);
-});
-}]);
-
-</script>
+            <li ng-hide="main.user">
+              <a ui-sref="register"><span>Register</span></a>
+            </li>
+            <li ng-hide="main.user">
+              <a ui-sref="login" ng-click="main.toggleLogin()">Login</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+  <main ui-view></main>
+  <footer>
+    <p class="footer-text">RemoteComposer is a registered trademark of Team RichJam.<br>
+      Made with &hearts; at GA
+    </p>
+  </footer>
 </body>
 </html>
