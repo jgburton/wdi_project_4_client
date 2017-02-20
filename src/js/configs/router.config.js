@@ -1,6 +1,6 @@
 angular
-  .module('angularAuthentication')
-  .config(Router);
+.module('angularAuthentication')
+.config(Router);
 
 Router.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
 function Router($stateProvider, $locationProvider, $urlRouterProvider){
@@ -28,6 +28,12 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     templateUrl: '/js/views/users/index.html',
     controller: 'UsersIndexCtrl',
     controllerAs: 'usersIndex'
+  })
+  .state('ideas', {
+    url: '/ideas',
+    templateUrl: '/js/views/ideas/index.html',
+    controller: 'IdeasIndexCtrl',
+    controllerAs: 'ideaIndex'
   });
 
   $urlRouterProvider.otherwise('/');
