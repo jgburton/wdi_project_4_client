@@ -1,3 +1,3 @@
 angular
   .module('angularAuthentication')
-  .constant('API', `${window.location.origin}/api`);
+  .constant('API', `http://localhost:3000/api`);

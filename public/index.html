@@ -31,13 +31,19 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li ng-show="main.user">
-              <!-- <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome, {{ main.user.name }}</p> -->
+              <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome, {{ main.user.email }}</p>
             </li>
             <li ng-hide="main.user">
               <a ui-sref="register"><span>Register</span></a>
             </li>
             <li ng-hide="main.user">
               <a ui-sref="login" ng-click="main.toggleLogin()">Login</a>
+            </li>
+            <li ng-show="main.user">
+              <a ui-sref="usersIndex">Users</a>
+            </li>
+            <li ng-show="main.user">
+              <a ng-click="main.logout()">Logout</a>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
