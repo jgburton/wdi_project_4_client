@@ -36,9 +36,9 @@ onchange="alert(event.fpfile.url)">
 
 <form>
 
-<input type="button" value="PlaySound" onClick="PlaySound('audio1'),PlaySound('audio2')">
+<input type="button" value="PlaySound" ng-click="ideaIndex.playAll()">
 
-<input type="button" value="PauseSound" onClick="PauseSound('audio2'),PauseSound('audio1')">
+<input type="button" value="PauseSound" ng-click="ideaIndex.pauseAll()">
 
 </form>
 
