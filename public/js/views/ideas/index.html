@@ -1,68 +1,35 @@
 
 <h1>Ideas</h1>
-<p>Uploaded mp3s here in categories of instrument</p>
 
-<input ng-show="main.user" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z"
-onchange="alert(event.fpfile.url)">
-<br>
-
-<div class="container" ng-repeat="idea in ideaIndex.ideas">
-  <h4>{{ idea.name }}</h4>
-  <h4>{{ idea.blurb }}</h4>
-  <h4>{{ idea.instruments }}</h4>
-  <audio controls ng-src="{{ idea.sound_url }}"></audio>
-  <h4>{{ idea.num_of_additions }}</h4>
-</div>
-
-<form>
-  <input type="button" value="PlaySound" ng-click="ideaIndex.playAll()">
-  <input type="button" value="PauseSound" ng-click="ideaIndex.pauseAll()">
-</form>
-
-<!-- <h4 ng-repeat="idea in ideaIndex.ideas">{{ idea }}</h4> -->
-<!-- <h4 ng-repeat="idea in ideaIndex.ideas">{{ idea.additions }}</h4> -->
-
-
-
-<!-- <audio controls>
-<source ng-src="https://cdn.filestackcontent.com/68EAlNHhSmeXpYDlkFTb" type="audio/ogg">
-<!-- Piano -->
-<!-- Your browser does not support the audio tag. -->
-<!-- </audio> -->
-
-<!-- __________________________________ -->
-<!--
-<div class="container">
-<div class="col-xs-6 col-sm-4 col-md-3 ideacard" ng-repeat="idea in ideasIndex.ideas"> -->
-<!-- <div class="circle" style="background-image: url({{ user.image }})"></div> -->
-<!-- <div class="card-block">
-Name is displaying
-<h4 class="card-title">{{ idea.name }}</h4>
-<p class="idea"><audio controls>{{ idea.sound_url }}</audio></p>
-<a ui-sref="userShow({ id: user._id})" href="#" class="btn btn-primary"> Find Out More </a>
-<form>
-<input type="button" value="PlaySound" ng-click="ideaIndex.playAll()">
-<input type="button" value="PauseSound" ng-click="ideaIndex.pauseAll()">
-</form>
-</div>
-</div>
+<!-- <div ng-hide="ideaIndex.ideas">
+  <input ng-hide="ideaIndex.idea" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaIndex.assignSoundUrl(event.fpfile.url)">
 </div> -->
 
+<div ng-hide="ideaShow.addition">
+  <input ng-hide="ideaShow.addition" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaIndex.assignSoundUrl(event.fpfile.url)">
+</div>
+
+<div ng-show="ideaIndex.ideas">
+  <h2>Tell us about your Idea</h2>
+  <form ng-submit="ideaIndex.submitIdea()">
+    <input type="text" ng-model="ideaIndex.idea.name" placeholder="Name">
+    <input type="text" ng-model="ideaIndex.idea.blurb" placeholder="Blurb">
+    <input type="text" ng-model="ideaIndex.instrument1" placeholder="Instrument 1">
+    <input type="text" ng-model="ideaIndex.instrument2" placeholder="Instrument 2 (Optional)">
+    <input type="text" ng-model="ideaIndex.instrument3" placeholder="Instrument 3 (Optional)">
+    <input type="submit" name="" value="Submit">
+  </form>
+</div>
 
 
 
-
-
-
-
-
-<!-- <audio controls>
-<source ng-src="" type="audio/ogg">
-Mandolin
-Your browser does not support the audio tag.
-</audio> -->
-
-<!-- <form>
-<input type="button" value="PlaySound" ng-click="ideaIndex.playAll()">
-<input type="button" value="PauseSound" ng-click="ideaIndex.pauseAll()">
-</form> -->
+<!-- <div class="ideaIndex.ideas"> -->
+    <div ng-show="ideaIndex.ideas" class="container" ng-repeat="idea in ideaIndex.ideas" ui-sref="ideasShow({id: idea.id})">
+      <h4>{{ idea.name }}</h4>
+      <h4>{{ idea.blurb }}</h4>
+      <h4>{{ idea.instruments }}</h4>
+      <audio class="playme" controls ng-src="{{ idea.sound_url }}"></audio>
+      <h4>{{ idea.num_of_additions }}</h4>
+      <h4>{{ idea.idea_poster }}</h4>
+    </div>
+<!-- </div> -->

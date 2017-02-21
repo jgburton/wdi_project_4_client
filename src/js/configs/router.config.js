@@ -34,6 +34,12 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     templateUrl: '/js/views/ideas/index.html',
     controller: 'IdeasIndexCtrl',
     controllerAs: 'ideaIndex'
+  })
+  .state('ideasShow', {
+    url: '/ideas/:id',
+    templateUrl: '/js/views/ideas/show.html',
+    controller: 'IdeasShowCtrl',
+    controllerAs: 'ideaShow'
   });
 
   $urlRouterProvider.otherwise('/');
