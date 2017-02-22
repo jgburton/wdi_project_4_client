@@ -1,55 +1,32 @@
-// angular
-// .module('angularAuthentication')
-// .controller('IdeasIndexCtrl', IdeasIndexCtrl);
-//
-// IdeasIndexCtrl.$inject = ['User', 'Idea'];
-// function IdeasIndexCtrl(User, Idea){
-//   const vm = this;
-//
-//
-//   Idea.query().$promise.then(data => {
-//     vm.ideas = data;
-//     // console.log(vm.ideas);
-//   });
-//
-// }
-
-
-
-// ____________________________________
-
 angular
 .module('angularAuthentication')
 .controller('IdeasIndexCtrl', IdeasIndexCtrl);
 
-IdeasIndexCtrl.$inject = ['User', 'Idea', '$scope'];
-function IdeasIndexCtrl(User, Idea, $scope){
+IdeasIndexCtrl.$inject = [
+  'User',
+  'Idea',
+  '$scope',
+  'filepickerService'
+];
+function IdeasIndexCtrl(
+  User,
+  Idea,
+  $scope,
+  filepickerService
+){
   const vm = this;
-
 
   Idea.query().$promise.then(data => {
     vm.ideas = data;
-    // console.log(vm.ideas);
   });
 
-
-
-
-
-
-  // vm.showPicker = function(){
-  //   vm.submittingidea = true;
-  //   $('#picker').html('<input ng-hide="ideaShow.idea.sound_url" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaShow.assignSoundUrl(event.fpfile.url)">');
-  // }
-
-
-
-  vm.assignSoundUrl = function(url){
-    console.log('running');
-    vm.idea = {};
-    vm.idea.sound_url = url;
-    console.log(vm.idea);
-    $scope.$apply();
+  vm.addAudio = () => {
+    filepickerService.pick({
+      mimetype: 'audio/*'
+    }, blob => {
+      vm.idea = vm.idea || {};
+      vm.idea.sound_url = blob.url;
+    });
   };
 
   vm.submitIdea = function(){
@@ -80,24 +57,6 @@ function IdeasIndexCtrl(User, Idea, $scope){
   vm.pauseAll = () => {
     $('audio').each((tag, element) => element.pause());
   };
-
-  // vm.pickFile = pickFile;
-
-  // vm.onSuccess = onSuccess;
-  //
-  // // function pickFile(){
-  // //   console.log('running');
-  // //   filepickerService.pick(
-  // //     {mimetype: 'audio/*'},
-  // //     onSuccess
-  // //   );
-  // // };
-  //
-  // function onSuccess(url){
-  //   console.log('running');
-  //   console.log(url);
-  // };
-
 }
 
 

@@ -2,28 +2,35 @@ angular
 .module('angularAuthentication')
 .controller('IdeasShowCtrl', IdeasShowCtrl);
 
-IdeasShowCtrl.$inject = ['User', 'Idea', '$stateParams', '$scope', 'Addition'];
-function IdeasShowCtrl(User, Idea, $stateParams, $scope, Addition){
+IdeasShowCtrl.$inject = [
+  'User',
+  'Idea',
+  '$stateParams',
+  '$scope',
+  'Addition',
+  'filepickerService'
+];
+function IdeasShowCtrl(
+  User,
+  Idea,
+  $stateParams,
+  $scope,
+  Addition,
+  filepickerService
+){
   const vm = this;
-
 
   Idea.get($stateParams).$promise.then(data => {
     vm.idea = data;
   });
 
-  // vm.showPicker = function(){
-  //   vm.submittingAddition = true;
-  //   $('#picker').html('<input ng-hide="ideaShow.addition.sound_url" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaShow.assignSoundUrl(event.fpfile.url)">');
-  // }
-
-
-
-  vm.assignSoundUrl = function(url){
-    console.log('running');
-    vm.addition = {};
-    vm.addition.sound_url = url;
-    console.log(vm.addition);
-    $scope.$apply();
+  vm.addAudio = () => {
+    filepickerService.pick({
+      mimetype: 'audio/*'
+    }, blob => {
+      vm.idea = vm.idea || {};
+      vm.idea.sound_url = blob.url;
+    });
   };
 
   vm.submitAddition = function(){
@@ -47,6 +54,7 @@ function IdeasShowCtrl(User, Idea, $stateParams, $scope, Addition){
       vm.addition = null;
     });
   };
+  
   vm.playAll = () => {
     $('audio').each((tag, element) => element.play());
   };
@@ -54,22 +62,4 @@ function IdeasShowCtrl(User, Idea, $stateParams, $scope, Addition){
   vm.pauseAll = () => {
     $('audio').each((tag, element) => element.pause());
   };
-
-  // vm.pickFile = pickFile;
-
-  // vm.onSuccess = onSuccess;
-  //
-  // // function pickFile(){
-  // //   console.log('running');
-  // //   filepickerService.pick(
-  // //     {mimetype: 'audio/*'},
-  // //     onSuccess
-  // //   );
-  // // };
-  //
-  // function onSuccess(url){
-  //   console.log('running');
-  //   console.log(url);
-  // };
-
 }
