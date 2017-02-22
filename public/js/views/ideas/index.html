@@ -3,7 +3,33 @@
   <p>Welcome to the the Idea page, if you have an idea that you are struggling to develop post it here so other composers can listen and add Additions to it.</p>
   <p> Hopefully this will inspire you to develop it more, Happy collaborating.</p>
 
+<<<<<<< HEAD
   <h1>Ideas</h1>
+=======
+<!-- <div ng-hide="ideaIndex.ideas">
+  <input ng-hide="ideaIndex.idea" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaIndex.assignSoundUrl(event.fpfile.url)">
+</div> -->
+
+TEST
+<!-- <script src="https://api.filestackapi.com/filestack.js"></script> -->
+
+
+<div ng-hide="ideaShow.addition">
+  <input ng-hide="ideaShow.addition" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaIndex.assignSoundUrl(event.fpfile.url)">
+</div>
+
+<div ng-show="ideaIndex.ideas">
+  <h2>Tell us about your Idea</h2>
+  <form ng-submit="ideaIndex.submitIdea()">
+    <input type="text" ng-model="ideaIndex.idea.name" placeholder="Name">
+    <input type="text" ng-model="ideaIndex.idea.blurb" placeholder="Blurb">
+    <input type="text" ng-model="ideaIndex.instrument1" placeholder="Instrument 1">
+    <input type="text" ng-model="ideaIndex.instrument2" placeholder="Instrument 2 (Optional)">
+    <input type="text" ng-model="ideaIndex.instrument3" placeholder="Instrument 3 (Optional)">
+    <input type="submit" name="" value="Submit">
+  </form>
+</div>
+>>>>>>> 180305ec6c3cdc5d5b464d000b40ab2c6a2827f5
 
   <div ng-show="ideaIndex.ideas">
     <h2>Tell us about your Idea</h2>
