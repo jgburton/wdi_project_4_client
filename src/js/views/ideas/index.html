@@ -3,20 +3,7 @@
   <p>Welcome to the the Idea page, if you have an idea that you are struggling to develop post it here so other composers can listen and add Additions to it.</p>
   <p> Hopefully this will inspire you to develop it more, Happy collaborating.</p>
 
-<<<<<<< HEAD
   <h1>Ideas</h1>
-=======
-<!-- <div ng-hide="ideaIndex.ideas">
-  <input ng-hide="ideaIndex.idea" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaIndex.assignSoundUrl(event.fpfile.url)">
-</div> -->
-
-TEST
-<!-- <script src="https://api.filestackapi.com/filestack.js"></script> -->
-
-
-<div ng-hide="ideaShow.addition">
-  <input ng-hide="ideaShow.addition" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z" onchange="angular.element(this).scope().ideaIndex.assignSoundUrl(event.fpfile.url)">
-</div>
 
 <div ng-show="ideaIndex.ideas">
   <h2>Tell us about your Idea</h2>
@@ -29,7 +16,6 @@ TEST
     <input type="submit" name="" value="Submit">
   </form>
 </div>
->>>>>>> 180305ec6c3cdc5d5b464d000b40ab2c6a2827f5
 
   <div ng-show="ideaIndex.ideas">
     <h2>Tell us about your Idea</h2>
@@ -44,7 +30,7 @@ TEST
     </form>
   </div>
 
-  <h5> Artist: | Name of Idea: | About the idea: | Instrument: </h5> 
+  <h5> Artist: | Name of Idea: | About the idea: | Instrument: </h5>
 
   <div ng-show="ideaIndex.ideas" class="container" ng-repeat="idea in ideaIndex.ideas" ui-sref="ideasShow({id: idea.id})">
     <a href="#">
