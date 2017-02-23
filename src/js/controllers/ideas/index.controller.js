@@ -15,7 +15,7 @@ function IdeasIndexCtrl(
   filepickerService
 ){
   const vm = this;
-
+  vm.showIdeas = true;
   Idea.query().$promise.then(data => {
     vm.ideas = data;
   });
@@ -30,25 +30,28 @@ function IdeasIndexCtrl(
   };
 
   vm.submitIdea = function(){
-    vm.idea.instruments = [];
-    if (vm.instrument1 && vm.instrument1.length){
-      vm.idea.instruments.push(vm.instrument1);
+    if (vm.idea.sound_url){
+      vm.idea.instruments = [];
+      if (vm.instrument1 && vm.instrument1.length){
+        vm.idea.instruments.push(vm.instrument1);
+      }
+      if (vm.instrument2 && vm.instrument2.length){
+        vm.idea.instruments.push(vm.instrument2);
+      }
+      if (vm.instrument3 && vm.instrument3.length){
+        vm.idea.instruments.push(vm.instrument3);
+      }
+      vm.idea.idea_id = vm.idea.id;
+      Idea
+      .save(vm.idea)
+      .$promise
+      .then(data => {
+        console.log('success', data);
+        vm.ideas.push(data);
+        vm.idea = null;
+        vm.showIdeas = true;
+      });
     }
-    if (vm.instrument2 && vm.instrument2.length){
-      vm.idea.instruments.push(vm.instrument2);
-    }
-    if (vm.instrument3 && vm.instrument3.length){
-      vm.idea.instruments.push(vm.instrument3);
-    }
-    vm.idea.idea_id = vm.idea.id;
-    Idea
-    .save(vm.idea)
-    .$promise
-    .then(data => {
-      console.log('success', data);
-      vm.idea.ideas.push(data);
-      vm.idea = null;
-    });
   };
   vm.playAll = () => {
     $('audio').each((tag, element) => element.play());
