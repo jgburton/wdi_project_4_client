@@ -1,6 +1,6 @@
 angular
-  .module('angularAuthentication')
-  .controller('LoginCtrl', LoginCtrl);
+.module('angularAuthentication')
+.controller('LoginCtrl', LoginCtrl);
 
 LoginCtrl.$inject = ['User', 'CurrentUserService', '$state'];
 function LoginCtrl(User, CurrentUserService, $state) {
@@ -17,4 +17,5 @@ function LoginCtrl(User, CurrentUserService, $state) {
       console.log(err);
     });
   };
+
 }
