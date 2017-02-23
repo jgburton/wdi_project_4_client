@@ -28,9 +28,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
+
+        
+
             <li ng-show="main.user">
               <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome, {{ main.user.email }}</p>
             </li>
+
+
+
             <li ng-hide="main.user">
               <a ui-sref="register" ng-click="main.toggleRegister()"><span>Register</span></a>
             </li>
