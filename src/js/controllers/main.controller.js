@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('remoteComposer')
   .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];

@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('remoteComposer')
 .config(function (filepickerProvider) {
   filepickerProvider.setKey('A7oUB4j1TYmHPZ1dWbCA9z');
 });

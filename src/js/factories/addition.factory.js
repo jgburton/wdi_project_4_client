@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('remoteComposer')
   .factory('Addition', additionFactory);
 
 additionFactory.$inject = ['API', '$resource'];

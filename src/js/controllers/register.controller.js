@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('remoteComposer')
 .controller('RegisterCtrl', RegisterCtrl);
 
 RegisterCtrl.$inject = ['User', 'CurrentUserService', '$state'];

@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('remoteComposer')
   .service('CurrentUserService', CurrentUserService);
 
 CurrentUserService.$inject = ['TokenService', '$rootScope', 'User'];

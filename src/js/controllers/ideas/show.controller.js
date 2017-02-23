@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('remoteComposer')
 .controller('IdeasShowCtrl', IdeasShowCtrl);
 
 IdeasShowCtrl.$inject = [

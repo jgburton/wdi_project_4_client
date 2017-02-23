@@ -28,7 +28,7 @@
   <h3>{{ideaShow.idea.name}}</h3>
 
 
-<h5>Artist: | Name of Idea: | About the idea: | Instrument:</h5>
+<h5>Artist | Name of Idea | About the Idea | Instrument | No of Additions </h5>
 
 
   <!-- <div class="IdeaWithAdditions" ng-show="Addition.showAdditions" ng-repeat="addition in additionIndex.addition" ui-sref="additionsShow({id: idea.id})"> -->
@@ -48,16 +48,17 @@
 
     <h3>Additions</h3>
 
-      <h5>  Artist: | Name of Addition: | About the idea: | Instrument: </h5>
+      <h5>  Artist | About the Addition | Instrument </h5>
     <div class="container" ng-repeat="idea in ideaShow.idea.additions">
-      <!-- <h4>{{ idea.name }}</h4> -->
-      <h4> Addition Poster: {{ idea.addition_poster }}</h4>
+      <h4> {{ idea.addition_poster }}</h4>
       <h4>Blurb: {{ idea.blurb }}</h4>
       <h4>{{ idea.instruments }}</h4>
       <br>
       <audio class="playme" controls ng-src="{{ idea.sound_url }}"></audio>
 
     </div>
+
+
 
 
     <button class="playSound" type="button" value="PlaySound" ng-click="ideaShow.playAll()">PlaySound</button>

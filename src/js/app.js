@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication', [
+.module('remoteComposer', [
   'ui.router',
   'ngResource',
   'angular-jwt',
