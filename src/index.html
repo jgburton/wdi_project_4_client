@@ -32,7 +32,7 @@
         
 
             <li ng-show="main.user">
-              <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome, {{ main.user.email }}</p>
+              <p ui-sref="userShow({id: main.user._id})" class="navbar-text">Welcome {{ main.user.username }}</p>
             </li>
 
 
@@ -63,10 +63,10 @@
   <!-- <input ng-show="main.user" type="filepicker" data-fp-apikey="Au0FfUuSTvihNwvzZV0Q3z"
   onchange="alert(event.fpfile.url)"> -->
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <p class="footer-text">RemoteComposer is a registered trademark of Team RichJam.<br>
       Made with &hearts; at GA
     </p>
-  </footer>
+  </footer> -->
 </body>
 </html>

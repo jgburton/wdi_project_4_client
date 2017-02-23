@@ -4,49 +4,51 @@
 // nav bar colour
 .navbar-default {
   background-color: #333;
-  border-color: #ccc
+  border-color: #333;
+  margin-bottom: -20px;
+    color: #ccc;
 }
 
-// logo/app name text
+// logo/app name -- text
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
-      color: #ccc
+  color: #ccc;
 }
 
-// username/email text
+// username/email -- text
 .navbar-default .navbar-text{
-  color: #ccc
+  color: #ccc;
 }
 
-// text color on navbar
+// li links on navbar -- text
 .navbar-default .navbar-nav > li > a{
-    color: #ccc
+  color: #ccc;
 }
+
+
+
+
 
 // Body------------------
 
 // ideapage------
 .ideaPageContainer{
-margin: 40px;
-text-align: center;
+  margin: 40px;
+  text-align: center;
 }
 
 .ideaPageContainer, a{
-color: black;
+  color: black;
 }
+
+
 
 // Additionpage------
 .showContainer{
-margin: 40px;
-text-align: center;
-}
-
-// footer-----
-.footer{
-  margin: 40px;
   text-align: center;
-
 }
 
+
+// addition page text----------
 .IdeaWithAdditions, h4{
   display: inline-block;
   padding: 10px;
@@ -54,6 +56,32 @@ text-align: center;
 
 }
 
+// Homepage css
+
+.first-section, button {
+  border: white;
+  border: 2px;
+
+}
+
+// footer------------
+.footer{
+  text-align: center;
+  width: inherit;
+  height: 200px;
+  color: #fafafa;
+  text-align: center;
+
+  background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+//all audio tags----------
 audio {
   width: 550px;
   height: 17px;
@@ -81,4 +109,61 @@ button, html input[type="button"], input[type="reset"], input[type="submit"]{
   border: 0px;
   width: 100px;
   height: 25px;
+}
+
+.profileImage{
+  border-radius: 50px;
+}
+
+.homeContainer{
+  width: 100%;
+  height: 100vh;
+
+  .first-section {
+    width: inherit;
+    height: 600px;
+    color: #fafafa;
+    text-align: center;
+
+    background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.col
+{
+    float: left;
+    width: 48%;
+    margin: 10px;
+    text-align: center;
+    padding: 30px;
+}
+
+.last{
+    // clear: left;
+}
+
+.row{
+    // border: 1px solid green;
+}
+
+
+.col1
+{
+    float: left;
+    width: 48%;
+    margin: 10px;
+    text-align: center;
+    padding: 30px;
+}
+
+.last{
+    // clear: left;
+}
+
+.row2{
+    // border: 1px solid green;
 }

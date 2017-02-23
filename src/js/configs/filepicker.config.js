@@ -4,7 +4,4 @@ angular
   filepickerProvider.setKey('A7oUB4j1TYmHPZ1dWbCA9z');
 });
 
-
-
-
-// Jamie's banned : Au0FfUuSTvihNwvzZV0Q3z
+  // Jamies key : Au0FfUuSTvihNwvzZV0Q3z

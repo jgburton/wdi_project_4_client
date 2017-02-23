@@ -1,12 +1,12 @@
 <div class="ideaPageContainer">
 
+<h1>Ideas</h1>
+
   <p>Welcome to the the Idea page, if you have an idea that you are struggling to develop post it here so other composers can listen and add Additions to it.</p>
   <p> Hopefully this will inspire you to develop it more, Happy collaborating.</p>
 
-  <h1>Ideas</h1>
-
   <div ng-show="ideaIndex.ideas">
-    <h2>Tell us about your Idea</h2>
+    <h3>Tell us about your Idea</h3>
     <form ng-submit="ideaIndex.submitIdea()">
       <input type="text" ng-model="ideaIndex.idea.name" placeholder="Name">
       <input type="text" ng-model="ideaIndex.idea.blurb" placeholder="Blurb">
@@ -22,7 +22,8 @@
 
   <div ng-show="ideaIndex.ideas" class="container" ng-repeat="idea in ideaIndex.ideas" ui-sref="ideasShow({id: idea.id})">
     <a href="#">
-      <h4>{{ idea.idea_poster }}</h4>
+      <img ng-src="{{idea.idea_poster.image}}"  class="profileImage" width="40px;">
+      <h4>{{ idea.idea_poster.username }}</h4>
       <h4>{{ idea.name }}</h4>
       <h4>{{ idea.blurb }}</h4>
       <h4>{{ idea.instruments }}</h4>
