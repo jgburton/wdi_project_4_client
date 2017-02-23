@@ -112,7 +112,13 @@ button, html input[type="button"], input[type="reset"], input[type="submit"]{
 }
 
 .profileImage{
+  // border-radius: 50px;
+  margin: 0 auto;
   border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
 }
 
 .homeContainer{
