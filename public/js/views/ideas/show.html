@@ -7,14 +7,19 @@
 
   <!-- <h2>{{ideaShow.idea.name}}</h2> -->
 
-  <div>
+<!-- - -->
+  <button ng-click="additionShow.showAdditions = !additionShow.showAdditions">{{ additionShow.showAdditions ? ' Hide ' : 'Add Addition' }}</button>
+
+<!--  -->
+
+  <div ng-show="additionShow.showAdditions">
     <h3>Tell us about your addition</h3>
     <form ng-submit="ideaShow.submitAddition()">
       <input type="text" ng-model="ideaShow.addition.blurb" placeholder="Blurb">
       <input type="text" ng-model="ideaShow.instrument1" placeholder="Instrument 1">
       <input type="text" ng-model="ideaShow.instrument2" placeholder="Instrument 2 (Optional)">
       <input type="text" ng-model="ideaShow.instrument3" placeholder="Instrument 3 (Optional)">
-      <input type="button" ng-click="ideaShow.addAudio()" value="Add Addition">
+      <input type="button" ng-click="ideaShow.addAudio()" value="Upload File">
       <input type="submit" name="" value="Submit">
     </form>
   </div>
@@ -26,8 +31,10 @@
 <h5>Artist: | Name of Idea: | About the idea: | Instrument:</h5>
 
 
-  <div class="IdeaWithAdditions">
+  <!-- <div class="IdeaWithAdditions" ng-show="Addition.showAdditions" ng-repeat="addition in additionIndex.addition" ui-sref="additionsShow({id: idea.id})"> -->
 
+
+<div class="IdeaWithAdditions" ng-hide="additionIndex.showAdditions" ui-sref="additionsShow({id: addition.id})">
     <div class="container">
       <h4>{{ ideaShow.idea.idea_poster.username }}</h4>
       <h4>{{ ideaShow.idea.name }}</h4>
