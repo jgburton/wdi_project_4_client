@@ -6,8 +6,8 @@
   background-color: #333;
   border-color: #333;
   margin-bottom: -20px;
-    color: #ccc;
-    font-family: 'Roboto', sans-serif;
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
 
 }
 // logo/app name -- text
@@ -54,24 +54,6 @@ h1, h3, p{
 
 }
 
-.homeContainer{
-  // width: 100%;
-  height: 100vh;
-
-  .first-section {
-    width: inherit;
-    height: 600px;
-    color: #fafafa;
-    text-align: center;
-
-    background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
 .explphoto{
   width: 230px;
   opacity: 0.7;
@@ -79,41 +61,41 @@ h1, h3, p{
 
 .col2
 {
-    float: left;
-    width: 48%;
-    margin: 10px;
-    text-align: center;
-    padding: 30px;
-    // margin: 150px, 0px, 150px;
+  float: left;
+  width: 48%;
+  margin: 10px;
+  text-align: center;
+  padding: 30px;
+  // margin: 150px, 0px, 150px;
 
 }
 
 .last{
-    // clear: left;
+  // clear: left;
 }
 
 .row3{
-    // border: 1px solid green;
-      background-color: white;
+  // border: 1px solid green;
+  background-color: white;
 }
 
 .col1
 {
-    float: left;
-    width: 23%;
-    margin: 10px;
-    text-align: center;
-    padding: 30px;
-    background-color: white;
+  float: left;
+  width: 23%;
+  margin: 10px;
+  text-align: center;
+  padding: 30px;
+  background-color: white;
 
 }
 
 .last{
-    // clear: left;
+  // clear: left;
 }
 
 .row2{
-    // border: 1px solid green;
+  // border: 1px solid green;
 }
 
 
@@ -220,4 +202,97 @@ button, html input[type="button"], input[type="reset"], input[type="submit"]{
   height: 50px;
   background-size: cover;
   background-position: center;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  h3 {
+    color: #fff;
+  }
+}
+
+.homeContainer{
+  margin-top: 20px;
+  // width: 100%;
+  // height: 100vh;
+
+  .first-section {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    color: #fafafa;
+    text-align: center;
+
+    background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .centered {
+      margin-top: -80px;
+    }
+  }
+
+  .second-section {
+    background: #fff;
+
+    .tile {
+      margin: 30px 0px;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .third-section {
+    position: relative;
+    height: 300px;
+
+    background: url('http://www.prbmedia.co.uk/cropped-music-studio.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .fourth-section {
+    padding: 60px;
+    .tile {
+      p{
+        text-align: justify;
+      }
+      text-align: center;
+    }
+  }
+
+  .fifth-section {
+    background: url('http://furtive.ie/wp-content/uploads/2015/04/1BW-1910x500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 350px;
+  }
+
+  .sixth-section {
+    position: relative;
+    background: #fff;
+    height: 150px;
+
+    footer {
+      text-align: center;
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
 }
