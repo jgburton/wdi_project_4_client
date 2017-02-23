@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('remoteComposer')
   .controller('UsersIndexCtrl', UsersIndexCtrl);
 
 UsersIndexCtrl.$inject = ['User'];

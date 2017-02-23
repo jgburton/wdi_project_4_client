@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('remoteComposer')
   .config(Interceptor);
 
 Interceptor.$inject = ['$httpProvider'];
