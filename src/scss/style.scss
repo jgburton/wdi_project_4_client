@@ -116,7 +116,10 @@ h1, h3, p{
 .ideaPageContainer, a{
   color: black;
   font-family: 'Roboto', sans-serif;
+}
 
+.ideaPageContainer, h1{
+margin-top: 30px;
 }
 // idea page end---------------------------------------------------
 
@@ -188,7 +191,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"]{
   color: #fafafa;
   border: 0px;
   width: 100px;
-  height: 25px;
+  height: 30px;
 }
 
 
