@@ -24,8 +24,10 @@ function IdeasIndexCtrl(
     filepickerService.pick({
       mimetype: 'audio/*'
     }, blob => {
+      console.log(blob, 'blob');
       vm.idea = vm.idea || {};
       vm.idea.sound_url = blob.url;
+      console.log(vm.idea);
     });
   };
 

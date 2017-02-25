@@ -28,8 +28,10 @@ function IdeasShowCtrl(
     filepickerService.pick({
       mimetype: 'audio/*'
     }, blob => {
-      vm.idea = vm.idea || {};
-      vm.idea.sound_url = blob.url;
+      console.log(blob, 'blob');
+      vm.addition = vm.addition || {};
+      vm.addition.sound_url = blob.url;
+      console.log(vm.addition);
     });
   };
 
@@ -54,7 +56,7 @@ function IdeasShowCtrl(
       vm.addition = null;
     });
   };
-  
+
   vm.playAll = () => {
     $('audio').each((tag, element) => element.play());
   };
