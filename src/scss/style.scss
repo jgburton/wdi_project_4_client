@@ -1,1 +1,343 @@
 // Import all of your scss files here
+
+// Navbar---------------------------------------------------
+// nav bar colour
+.navbar-default {
+  background-color: #333;
+  border-color: #333;
+  margin-bottom: -20px;
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+
+}
+// logo/app name -- text
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+
+}
+// username/email -- text
+.navbar-default .navbar-text{
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+
+}
+// li links on navbar -- text
+.navbar-default .navbar-nav > li > a{
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+
+}
+// nav bar link clicked
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+// burgur menu
+.navbar-default .navbar-toggle, .navbar-toggle:hover{
+  border: 0px;
+}
+
+// Navbar end----------------------------------------------------------
+
+// Homepage css-----------------------------------------------
+
+.first-section, button {
+  border: white;
+  border: 2px;
+}
+
+h1, h3, p{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.explphoto{
+  width: 230px;
+  opacity: 0.7;
+}
+
+.col2
+{
+  float: left;
+  width: 48%;
+  margin: 10px;
+  text-align: center;
+  padding: 30px;
+  // margin: 150px, 0px, 150px;
+
+}
+
+.last{
+  // clear: left;
+}
+
+.row3{
+  // border: 1px solid green;
+  background-color: white;
+}
+
+.col1
+{
+  float: left;
+  width: 23%;
+  margin: 10px;
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+
+}
+
+.last{
+  // clear: left;
+}
+
+.row2{
+  // border: 1px solid green;
+}
+
+
+.searchBar{
+  text-align: center;
+}
+
+// ------Homepage ---- end-------------------------------------------
+
+
+// ideapage-----------------------------------------
+.ideaPageContainer{
+  margin: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ideaPageContainer, a{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ideaPageContainer, h1{
+margin-top: 30px;
+}
+// idea page end---------------------------------------------------
+
+// Additionpage---------------------------------------
+.showContainer{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+}
+// addition page text-
+.IdeaWithAdditions, h4{
+  display: inline-block;
+  padding: 10px;
+  margin-top: 2px;
+}
+.profileImage{
+  border-radius: 50px;
+}
+
+
+
+// addition page end-----------------------------------------------------
+
+
+// footer-----------------------------------------------
+.footer{
+  text-align: center;
+  width: inherit;
+  // height: 200px;
+  color: #fafafa;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+
+  background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+// footer end------------------------------------------------------------
+
+
+//------all audio tags-----------------------------------------------
+audio {
+  width: 80%;
+  height: 17px;
+  background-color: #333;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+// sound buttons
+.playSound, .pauseSound {
+  border-radius: 50px;
+  background-color: #333;
+  color: #fafafa;
+  border: 0px;
+  width: 150px;
+  height: 25px;
+}
+
+
+//uploading audiofile on idea page
+
+button, html input[type="button"], input[type="reset"], input[type="submit"]{
+  border-radius: 60px;
+  background-color: #333;
+  color: #fafafa;
+  border: 0px;
+  width: 100px;
+  height: 30px;
+}
+
+
+//------audio tags end ------------------------------------------------
+
+.profileImage{
+  // border-radius: 50px;
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  h3 {
+    color: #fff;
+  }
+}
+
+.homeContainer{
+  margin-top: 20px;
+  // width: 100%;
+  // height: 100vh;
+
+  .first-section {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    color: #fafafa;
+    text-align: center;
+
+    background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .centered {
+      margin-top: -80px;
+    }
+  }
+
+  .second-section {
+    background: #fff;
+
+    .tile {
+      margin: 30px 0px;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .third-section {
+    position: relative;
+    height: 300px;
+
+    background: url('http://www.prbmedia.co.uk/cropped-music-studio.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .fourth-section {
+    padding: 60px;
+    .tile {
+      p{
+        text-align: justify;
+      }
+      text-align: center;
+    }
+  }
+
+  .class{
+    text-align: center;
+  }
+
+  .fifth-section {
+    background: url('http://furtive.ie/wp-content/uploads/2015/04/1BW-1910x500.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 350px;
+    // text-align: center;
+      position: relative;
+  }
+
+  .sixth-section {
+    position: relative;
+    background: #fff;
+    height: 150px;
+
+    footer {
+      text-align: center;
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+.fifth-section .projectquote, h3{
+  // position: relative;
+  height: 300px;
+text-align: center;
+color: white;
+// margin: 20px 0px 0px 0px;
+height: inherit;
+ height: auto;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea {
+    background: white;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+
+}
+
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-box-shadow: 0 0 0px 1000px white inset;
+
+}

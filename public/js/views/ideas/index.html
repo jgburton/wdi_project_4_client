@@ -1,0 +1,39 @@
+<div class="ideaPageContainer">
+
+  <h1>Ideas</h1>
+
+  <p>Welcome to the the Idea page, if you have an idea that you are struggling to develop post it here so other composers can listen and add Additions to it.</p>
+  <p> Hopefully this will inspire you to develop it more, Happy collaborating.</p>
+
+    <button ng-click="ideaIndex.showIdeas = !ideaIndex.showIdeas">{{ ideaIndex.showIdeas ? 'Submit idea' : 'Back to ideas' }}</button>
+
+    <div ng-hide="ideaIndex.showIdeas">
+      <h3>Tell us about your Idea</h3>
+      <form ng-submit="ideaIndex.submitIdea()">
+        <input type="text" ng-model="ideaIndex.idea.name" placeholder="Name">
+        <input type="text" ng-model="ideaIndex.idea.blurb" placeholder="Blurb">
+        <input type="text" ng-model="ideaIndex.instrument1" placeholder="Instrument 1">
+        <input type="text" ng-model="ideaIndex.instrument2" placeholder="Instrument 2 (Optional)">
+        <input type="text" ng-model="ideaIndex.instrument3" placeholder="Instrument 3 (Optional)">
+        <input type="button" ng-click="ideaIndex.addAudio()" value="Upload File">
+        <input type="submit" name="" value="Submit">
+      </form>
+    </div>
+
+
+  <h5> Artist | Name of Idea | About the Idea | Instrument | No of Additions </h5>
+
+
+  <div ng-show="ideaIndex.showIdeas" class="container" ng-repeat="idea in ideaIndex.ideas" ui-sref="ideasShow({id: idea.id})">
+    <a href="#">
+      <img ng-src="{{idea.idea_poster.image}}"  class="profileImage" width="40px;">
+      <h4>{{ idea.idea_poster.username }}</h4>
+      <h4>{{ idea.name }}</h4>
+      <h4>{{ idea.blurb }}</h4>
+      <h4>{{ idea.instruments }}</h4>
+      <h4>{{ idea.num_of_additions }}</h4>
+    </a>
+    <br>
+    <audio class="playme" controls ng-src="{{ idea.sound_url }}"></audio>
+  </div>
+</div>

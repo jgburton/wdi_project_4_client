@@ -1,0 +1,68 @@
+<div class="showContainer">
+
+    <h1>Additions</h1>
+
+  <p>Welcome to the addition page, the intention of this page is for composers to be able to contibute to an existing idea by creating an addition. </p>
+  <p>This is a ongoing colaborative and open source compostion page.</p>
+
+  <!-- <h2>{{ideaShow.idea.name}}</h2> -->
+
+<!-- - -->
+  <button ng-click="additionShow.showAdditions = !additionShow.showAdditions">{{ additionShow.showAdditions ? ' Hide ' : 'Add Addition' }}</button>
+
+<!--  -->
+
+  <div ng-show="additionShow.showAdditions">
+    <h3>Tell us about your addition</h3>
+    <form ng-submit="ideaShow.submitAddition()">
+      <input type="text" ng-model="ideaShow.addition.blurb" placeholder="Blurb">
+      <input type="text" ng-model="ideaShow.instrument1" placeholder="Instrument 1">
+      <input type="text" ng-model="ideaShow.instrument2" placeholder="Instrument 2 (Optional)">
+      <input type="text" ng-model="ideaShow.instrument3" placeholder="Instrument 3 (Optional)">
+      <input type="button" ng-click="ideaShow.addAudio()" value="Upload File">
+      <input type="submit" name="" value="Submit">
+    </form>
+  </div>
+<br>
+
+  <h3>{{ideaShow.idea.name}}</h3>
+
+
+<h5>Artist | Name of Idea | About the Idea | Instrument | No of Additions </h5>
+
+
+  <!-- <div class="IdeaWithAdditions" ng-show="Addition.showAdditions" ng-repeat="addition in additionIndex.addition" ui-sref="additionsShow({id: idea.id})"> -->
+
+
+<div class="IdeaWithAdditions" ng-hide="additionIndex.showAdditions" ui-sref="additionsShow({id: addition.id})">
+    <div class="container">
+      <h4>{{ ideaShow.idea.idea_poster.username }}</h4>
+      <h4>{{ ideaShow.idea.name }}</h4>
+      <h4>{{ ideaShow.idea.blurb }}</h4>
+      <h4>{{ ideaShow.idea.instruments }}</h4>
+      <h4>{{ ideaShow.idea.num_of_additions }}</h4>
+      <br>
+      <audio class="playme" controls ng-src="{{ ideaShow.idea.sound_url }}"></audio>
+    </div>
+
+
+    <h3>Additions</h3>
+
+      <h5>  Artist | About the Addition | Instrument </h5>
+    <div class="container" ng-repeat="idea in ideaShow.idea.additions">
+      <h4> {{ idea.addition_poster }}</h4>
+      <h4>Blurb: {{ idea.blurb }}</h4>
+      <h4>{{ idea.instruments }}</h4>
+      <br>
+      <audio class="playme" controls ng-src="{{ idea.sound_url }}"></audio>
+
+    </div>
+
+
+
+
+    <button class="playSound" type="button" value="PlaySound" ng-click="ideaShow.playAll()">PlaySound</button>
+    <button class="pauseSound" type="button" value="PauseSound" ng-click="ideaShow.pauseAll()">PauseSound</button>
+
+  </div>
+</div>
