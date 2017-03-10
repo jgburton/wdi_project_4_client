@@ -1,3 +1,3 @@
 angular
   .module('remoteComposer')
-  .constant('API', `http://localhost:3000/api`);
+  .constant('API', `https://tutormeet101-api.herokuapp.com/api`);
