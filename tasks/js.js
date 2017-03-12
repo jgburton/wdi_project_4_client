@@ -40,7 +40,7 @@ const buildJs = () => {
   .pipe(concat(config.output.js))
   .pipe(sourcemaps.init())
   // .pipe(gulpIf(global.production, uglify()))
-  .pipe(gulpIf(global.production, rename({ suffix: '.min' })))
+  // .pipe(gulpIf(global.production, rename({ suffix: '.min' })))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.dest.js))
   .pipe(gulpIf(!global.production, browserSync.stream()));
