@@ -31,6 +31,7 @@ function IdeasIndexCtrl(
     });
   };
 
+
   vm.submitIdea = function(){
     if (vm.idea.sound_url){
       vm.idea.instruments = [];
@@ -63,7 +64,6 @@ function IdeasIndexCtrl(
     $('audio').each((tag, element) => element.pause());
   };
 }
-
 
 
 
