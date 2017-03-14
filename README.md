@@ -122,7 +122,7 @@ Working in a duo proved exceptionally efficient and I project managed our progre
 Reaching MVP within 2 days of coding giving us time for styling and preparation of original audio for the app. It was a pleasure to combine my background in music with building an application.
 
 
-###Future Improvements: Implementing an email notification system for when additions are contributed to your original idea.
+###Future Improvements:
 
 Implementing an email notification system for when additions are contributed to your original idea.
 
